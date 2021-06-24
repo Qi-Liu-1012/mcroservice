@@ -1,0 +1,18 @@
+#启动端口
+server:
+  port: 7002
+
+#应用名
+spring:
+  application:
+    name: eureka
+
+#eureka实例名
+eureka:
+  instance:
+    hostname: eureka7002
+  client:
+    register-with-eureka: true #false 是否将自己注册进eureka，单机版false，集群版设置为true
+    fetch-registry: true #false 是否将自己注册进eureka，单机版false，集群版设置为true
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka/ #查询服务和注册服务都需要依赖这个地址,多个地址可用","分割
